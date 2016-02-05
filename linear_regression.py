@@ -27,7 +27,8 @@ cleanFICORange2=cleanFICORange.map(lambda x: [int(n) for n in x])
 midFICORange3=cleanFICORange2.map(lambda x: (x[0] + x[1])/2.0)
 loansData["FICO.Range"]=midFICORange3
 print loansData['FICO.Range'][0:5]
-
+#make new csv file
+loansData.to_csv('loansData_clean.csv', header=True, index=False)
 
 
 #Create Histogram
